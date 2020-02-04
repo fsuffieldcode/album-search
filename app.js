@@ -16,8 +16,8 @@ app.use(express.static(__dirname + '/public'));
 // setting the spotify-api goes here:
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: '06bad78299c149c4b4b022537c7fb88e',
-    clientSecret: 'bdf62e4caf2147c48d1572d8247bfe9f',
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
     redirectUri: 'http://localhost:3000/'
 });
 
