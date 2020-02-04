@@ -1,0 +1,20 @@
+body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat (1fr, auto);
+}
+
+.album-card {
+    width: 200px;
+    height: 300px;
+}
+
+.album-card img {
+    width: 100%;
+    max-height: 200px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artist search results</title>
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+
+<body>
+<div class="results-container">
+    <% searchResults.artists.items.forEach(function (result) { %>
+        <div class="album-card">
+            <a href="/albums/<%= result.id %>">
+        <% if (result.images[0]) { %>
+            <img src="<%= result.images[2].url %>"> 
+        <% } %>
+            View Albums
+            </a>
+        </div>
+    <% }) %>
+</div>
+
+
+</body>
+
+</html>
