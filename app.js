@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '/public'));
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    redirectUri: 'https://spotlify.heroku.com' || 'http://localhost:3000/'
+    redirectUri: 'https://spotlify.herokuapp.com' || 'https://localhost:3000'
 });
 
 // Retrieve an access token
