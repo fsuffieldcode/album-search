@@ -70,6 +70,20 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 });
 
+app.get('/tracks/:albumId', (req, res, next) => {
+
+    console.log('Album ID passed: ' + req.params.albumId)
+
+    spotifyApi.getAlbumTracks(req.params.albumId, { offset : 1 })
+  .then(function(data) {
+    res.render('tracks', {
+        tracks: data.body.items
+    })
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+})
+
 
 app.get("/", function (req, res) {
     res.render('home')
