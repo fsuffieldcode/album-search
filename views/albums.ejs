@@ -15,7 +15,7 @@
     <div class="card-container">
         <h1><%=artist%> Albums</h1>
         <ul>
-            <% albums.forEach(function (album){
+            <% albums.forEach(function (album) {
             if (album.album_type === 'album') { %>
             <li><a href="/tracks/<%= album.id %>"><%= album.name %></a></li>
             <% } %>
